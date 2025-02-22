@@ -1,0 +1,346 @@
+@media (max-width: 768px) {
+    .KATEGORI a{
+        height:clamp(100px,10vw, 400px);
+        width: clamp(150px,15vw, 350px);
+        
+        
+        }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Biar padding ga nambah ukuran elemen */
+} 
+body{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Mengatur scrollbar untuk seluruh halaman */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* jalur scrollbar */
+::-webkit-scrollbar-track {
+    background:#d9d9dc; 
+    border-radius: 10px; 
+}
+
+/* Handle (bagian yang bisa digeser) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect pada handle scrollbar */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+    
+}
+.borderUP{
+    background: #ecd29a;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+}
+.borderUP .judul{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50% );
+    visibility: visible;
+}
+.borderUP .judul h1{
+
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
+    z-index: 2;
+}
+.borderUP #search-overlay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.borderUP #search-overlay.show{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.borderUP #search-overlay.search-bar input {
+    position:absolute;
+    display: inline;
+    width: 55%;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 20%;
+    border-radius: 25px;
+    height: 30px;
+    border-color: transparent;
+    padding-left: 2%;
+}
+.borderUP button.hidden{
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+
+.borderUP button{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 17%;
+    top: 35%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.allUP{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 50px;
+    right: 5%;
+    top: 35%;
+    gap: 30px;
+}
+.allUP a {
+    color: #fff;
+    font-size: 20px;
+}
+.promo-border{
+    position: relative;
+    display: flex;
+    padding-top: 140px;
+    height: clamp(100px,450px);
+    padding-bottom: 60px;
+    width: 100%;
+    background: #d9d9dc;
+    white-space: nowrap;
+    flex-direction: column;
+}
+.promo {
+    width: calc(30vw + 50px); 
+    height: calc(20vw + 30px); 
+    max-width: 300px; 
+    max-height: 250px;
+}
+.scroll-promo{
+    display: flex;
+    gap: 70px;
+    overflow-x: auto;
+    width: 100%;
+    overflow: hidden;
+    animation: scrollText 10s linear infinite;
+}
+.promo-text {
+    position:relative;
+    display: flex;
+    z-index: 4;
+    align-items: start;
+    justify-content: center;
+    border: none;
+    height: 100px;
+    background: #d9d9dc;
+}
+.promo-text button {
+    background: #e9eef0; 
+    border: none; 
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+.promo-text button:hover {
+    background: #c3e9ff; 
+    transform: scale(1.05); 
+}
+.border-back  {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #000000;
+    height: 100%;
+    z-index: 100;
+
+}.border-back img{
+    width: 100%;
+}
+.border-back .discover{
+    width:200px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    text-decoration: none;
+    border: none;
+    z-index: 2;
+    color: white;
+    gap: 10px;
+}
+.border-back button {
+    backdrop-filter: blur(25px);
+    border-width: 2px;
+    border-color: white;
+    background: transparent;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.border-back button:hover {
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    position: relative;
+    background-image: url("../ASET/rtx2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50% 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+}
+
+main .text-rtx{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 45%;
+    left: 10%;
+    transform: translateX(-12%);
+    text-align: center;
+    padding: 0 50% 10% 3%;
+    color: #fff;
+}
+
+.READMORE-RTX button {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+}
+
+.READMORE-RTX button:hover { 
+    transform: scale(1.05); 
+}
+
+.KATEGORI {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    gap: 50px;
+    background: #d9d9dc;
+    
+}
+.KATEGORI a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height:clamp(100px,300px, 400px);
+    width: clamp(150px,250px, 350px);
+    text-decoration:none;
+}
+.KATEGORI a img{
+    background: #ffffff;
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+   
+
+}
+.KATEGORI a button{
+    width: 100px;
+    background: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+  
+}
+.KATEGORI a button:hover {
+    transform: scale(1.05);
+
+    color: #ecd29a;
+}
+.ABOUT-US {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+    background-image: url("../ASET/KATEGORI/BACKGROUND-ABOUT.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ABOUT-US .bungkus {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    font-size: 20px;
+    color: #000000;
+    background: transparent;
+    backdrop-filter: blur(4px); 
+    border-radius: 10px; 
+    }
+
+.ABOUT-US .bungkus a {
+    font-size: 15px;
+    padding-top: 15px;
+    color: #fff;
+
+}
+.ABOUT-US .bungkus a:hover {
+    transform: scale(1.05);
+
+    cursor: pointer;
+}
