@@ -1,15 +1,14 @@
-@media (max-width: 768px) {
-    .KATEGORI a{
-        height:clamp(100px,10vw, 400px);
-        width: clamp(150px,15vw, 350px);
-        
-        
-        }
+@media (max-width: 500px) {
+    *{
+    width: 100%;
 }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Biar padding ga nambah ukuran elemen */
+    
 } 
 body{
     width: 100%;
@@ -140,7 +139,7 @@ transition: opacity 0.3s ease-in-out;
 .promo {
     width: calc(30vw + 50px); 
     height: calc(20vw + 30px); 
-    max-width: 300px; 
+    max-width: 400px; 
     max-height: 250px;
 }
 .scroll-promo{
@@ -341,6 +340,5 @@ main .text-rtx{
 }
 .ABOUT-US .bungkus a:hover {
     transform: scale(1.05);
-
     cursor: pointer;
 }
