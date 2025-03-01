@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hawkcan">
+
+    <link rel="stylesheet" href="../CSS/LOGIN.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   	 <link rel="icon" type="image/png" href="/Assets/MEAT/ONCOM.jpeg" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/ASET/KATEGORI/RIBBIT.png" sizes="16x16" />
+    <title>LOGIN-PAGE | RIBBIT |</title>
+    <script src="../JS/JAVA.JS"></script>
+
+</head>
+<body>
+
+    
+    <form id="border-login" action="proses-login.php" method="post">
+        <a class="back" href="../HTML/HOMEPAGE.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1 class="judul">LOGIN</h1>
+
+        <div class="container-input">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="container-input">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class="fa-solid fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+        </div>
+
+
+        <div class="checkbox-container">
+            <div class="check">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label> 
+            </div>
+            <div class="forgot">
+                <a href="#" class="forgot-password"> forgot-password</a>
+            </div>
+        </div>
+        <div class="LOGIN-BUTTON">
+            <a href="#"> <button> LOGIN </button></a>
+        </div>
+        <div class="have-account">
+            <div class="check">
+                <label >Don't have a account? </label>   
+                <a href="#" class="forgot-password"> Register</a>
+            </div>
+  
+        </div>
+
+        
+
+
+    </form>
+
+
+</body>
+</html>

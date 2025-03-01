@@ -11,26 +11,23 @@ function toggleMenu() {
   }
 }
 
-// INI BUAT IKLAN
-function startScrolling() {
-  const container = document.querySelector(".scroll-promo"); // Pastikan pilih yang scrollable
-  const scrollSpeed = 1; // Kecepatan scroll (px per frame)
-
-  // Duplikasi konten supaya looping lebih smooth
-  container.innerHTML += container.innerHTML;
-
-  function scrollStep() {
-      container.scrollLeft += scrollSpeed;
-
-      // Jika sudah mencapai batas, reset ke awal agar seamless
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-          container.scrollLeft = 0;
+const sliderController = (function() {
+  let index = 0;
+  const imagesPerView = 3;
+  
+  function geser(arah) {
+      const slider = document.querySelector(".scroll-promo");
+      const totalImages = document.querySelectorAll(".scroll-promo img").length;
+      const maxIndex = totalImages - imagesPerView;
+      
+      if (arah === 'kanan') {
+          index = (index + imagesPerView) % (maxIndex + imagesPerView);
+      } else {
+          index = (index - imagesPerView + (maxIndex + imagesPerView)) % (maxIndex + imagesPerView);
       }
-
-      requestAnimationFrame(scrollStep); // Gunakan animasi frame untuk smooth
+      
+      slider.style.transform = `translateX(${-index * 300}px)`;
   }
-
-  scrollStep(); // Mulai animasi
-}
-
-document.addEventListener("DOMContentLoaded", startScrolling);
+  
+  return { geser };
+})();

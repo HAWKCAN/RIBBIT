@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Biar padding ga nambah ukuran elemen */
+    
+} 
+
+body {
+    display: flex;
+    position: relative;
+    background-image: url("../ASET/PICT3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#border-login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px ,350px ,500px);
+    height: clamp(300px,350px,500px);
+    border-color: #000;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 50px;
+
+}
+.container-input {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    padding: 10px;
+    
+
+
+}
+.container-input i{
+    margin-right: 10px;
+}
+.container-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+
+
+}
+.checkbox-container {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.checkbox-container .check,
+.checkbox-container label,
+.checkbox-container .forgot a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+input::placeholder {
+    color:#ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+
+.judul {
+    color: #000000;
+    position: absolute;
+    top:20px;
+    
+}
+.LOGIN-BUTTON {
+    display: flex;
+    width: 80%;
+    background: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.LOGIN-BUTTON:hover {
+    transform: scale(1.10);
+    background: #d8d8d8;
+    
+}
+.LOGIN-BUTTON a button {
+    border: none;
+    background: none;
+}
+.have-account {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+    
+}
+.have-account a {
+    text-decoration: none;
+    color: #fff;
+}
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    
+
+    font-size: 20px;
+ }
