@@ -13,7 +13,7 @@ function toggleMenu() {
 
 const sliderController = (function() {
   let index = 0;
-  const imagesPerView = 3;
+  const imagesPerView = 1;
   
   function geser(arah) {
       const slider = document.querySelector(".scroll-promo");

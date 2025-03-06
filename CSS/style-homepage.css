@@ -142,18 +142,19 @@ transition: opacity 0.3s ease-in-out;
 
 }
 .promo {
-    width: calc(30vw + 50px); 
+    /* width: calc(30vw + 50px); 
     height: calc(20vw + 30px); 
     max-width: 300px; 
-    max-height: 250px;
+    max-height: 250px; */
+    width: min(40vw, 300px); 
+    height: min(35vw, 250px);
     background: #fff;
     flex-shrink: 0;
     
 }
 .scroll-promo{
     display: flex;
-    gap: 40px;
-    overflow-x:hidden;
+    gap: 100px;
     width:100%;
     min-width: max-content;
     transition: transform 0.5s ease-in-out;
@@ -166,7 +167,7 @@ transition: opacity 0.3s ease-in-out;
 }
 .promo_kanan {
     position: absolute;
-    left: 90%;
+    left: 85%;
     top: 50%;
     width: 50px;
     height: 50px;
@@ -181,9 +182,10 @@ transition: opacity 0.3s ease-in-out;
     transform: scale(1.05); 
 
 }
+
 .promo_kiri {
     position: absolute;
-    right: 90%;
+    right: 85%;
     top: 50%;
     width: 50px;
     height: 50px;
@@ -372,8 +374,8 @@ main .text-rtx{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: min(90%, clamp(150px, 50vw, 300px)); /* Responsif dengan max 90% layar */
-    height: min(90%, clamp(100px, 40vh, 250px)); /* Responsif dengan max 90% layar */
+    width: min(90%, clamp(150px, 55vw, 300px)); /* Responsif dengan max 90% layar */
+    height: min(90%, clamp(100px, 45vh, 250px)); /* Responsif dengan max 90% layar */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
