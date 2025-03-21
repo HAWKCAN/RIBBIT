@@ -10,11 +10,48 @@ body{
     max-width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif
 
 }
 html {
     overflow-x: hidden;
+}
+
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+   /* .promo_kanan, .promo_kiri {
+        width: 40px;  
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .promo_kanan {
+        left: 85%;  
+    }
+
+    .promo_kiri {
+        right: 85%;
+    }
+*/
+
+}
+
+/* Responsif untuk layar sangat kecil (≤480px) */
+@media screen and (max-width: 480px) {
+    /* .promo_kanan, .promo_kiri {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .promo_kanan {
+        left: 90%;
+    }
+
+    .promo_kiri {
+        right: 90%;
+    } */
+    
 }
 /* Mengatur scrollbar untuk seluruh halaman */
 ::-webkit-scrollbar {
@@ -55,12 +92,18 @@ html {
     top: 30%;
     transform: translate(-50% );
     visibility: visible;
+
+}
+.borderUP .judul a{
+    text-decoration: none;
 }
 .borderUP .judul h1{
 
     font-family: 'EB Garamond', serif;
     font-size: 25px;
     z-index: 2;
+   
+    color: #000;
 }
 .borderUP #search-overlay{
     position: absolute;
@@ -138,14 +181,15 @@ transition: opacity 0.3s ease-in-out;
     flex-direction: column;
     padding-left: 30px;
     justify-content: center;
+    overflow-x: auto;
 
 
 }
+.promo-border::-webkit-scrollbar{
+    height: 3px
+}
 .promo {
-    /* width: calc(30vw + 50px); 
-    height: calc(20vw + 30px); 
-    max-width: 300px; 
-    max-height: 250px; */
+   
     width: min(40vw, 300px); 
     height: min(35vw, 250px);
     background: #fff;
@@ -154,27 +198,27 @@ transition: opacity 0.3s ease-in-out;
 }
 .scroll-promo{
     display: flex;
-    gap: 100px;
+    gap: 80px;
     width:100%;
     min-width: max-content;
     transition: transform 0.5s ease-in-out;
     white-space: nowrap;
     align-items: center;
    justify-content: flex-start;
-   scroll-behavior: smooth;
-
+   /* scroll-behavior: smooth; */
 
 }
-.promo_kanan {
+
+/* .promo_kanan {
     position: absolute;
-    left: 85%;
+    left: 80%;
     top: 50%;
     width: 50px;
     height: 50px;
     background: #fff;
     border-color: #fff;
     border-radius: 100%;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 .promo_kanan:hover{
@@ -185,21 +229,21 @@ transition: opacity 0.3s ease-in-out;
 
 .promo_kiri {
     position: absolute;
-    right: 85%;
+    right: 80%;
     top: 50%;
     width: 50px;
     height: 50px;
     background: #fff;
     border-color: #fff;
     border-radius: 100%;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 .promo_kiri:hover{
     background: #c3e9ff; 
     transform: scale(1.05); 
 
-}
+} */
 .promo-text {
     position:relative;
     display: flex;
@@ -395,4 +439,53 @@ main .text-rtx{
 .ABOUT-US .bungkus a:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    height: 70vh;
+    width: 100vw;
+    background: #000000;
+    color: #fff;
+
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  padding-top: 30px;
+
+
 }

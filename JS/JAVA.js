@@ -11,23 +11,23 @@ function toggleMenu() {
   }
 }
 
-const sliderController = (function() {
-  let index = 0;
-  const imagesPerView = 1;
+// const sliderController = (function() {
+//   let index = 1;
+//   const imagesPerView = 1;
   
-  function geser(arah) {
-      const slider = document.querySelector(".scroll-promo");
-      const totalImages = document.querySelectorAll(".scroll-promo img").length;
-      const maxIndex = totalImages - imagesPerView;
+//   function geser(arah) {
+//       const slider = document.querySelector(".scroll-promo");
+//       const totalImages = document.querySelectorAll(".scroll-promo img").length;
+//       const maxIndex = totalImages - imagesPerView;
       
-      if (arah === 'kanan') {
-          index = (index + imagesPerView) % (maxIndex + imagesPerView);
-      } else {
-          index = (index - imagesPerView + (maxIndex + imagesPerView)) % (maxIndex + imagesPerView);
-      }
+//       if (arah === 'kanan') {
+//           index = (index + imagesPerView) % (maxIndex + imagesPerView);
+//       } else {
+//           index = (index - imagesPerView + (maxIndex + imagesPerView)) % (maxIndex + imagesPerView);
+//       }
       
-      slider.style.transform = `translateX(${-index * 300}px)`;
-  }
+//       slider.style.transform = `translateX(${-index * 218}px)`;
+//   }
   
-  return { geser };
-})();
+//   return { geser };
+// })();
