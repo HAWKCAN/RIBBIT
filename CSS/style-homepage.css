@@ -34,6 +34,9 @@ html {
     }
 */
 
+    .allUP {
+        gap: 5px;
+    }
 }
 
 /* Responsif untuk layar sangat kecil (≤480px) */
@@ -51,7 +54,12 @@ html {
     .promo_kiri {
         right: 90%;
     } */
-    
+    .borderUP .judul h1 {
+        font-size: 15px;
+    }
+    .allUP {
+        gap: 5px;
+    }
 }
 /* Mengatur scrollbar untuk seluruh halaman */
 ::-webkit-scrollbar {
@@ -92,19 +100,26 @@ html {
     top: 30%;
     transform: translate(-50% );
     visibility: visible;
+    transition: background-color 0.3s, transform 0.3s;
 
 }
+
+/* .scrolled {
+    background-color: #800080;
+    transform: scale(1.1);
+} */
 .borderUP .judul a{
     text-decoration: none;
 }
 .borderUP .judul h1{
 
     font-family: 'EB Garamond', serif;
-    font-size: 25px;
+    font-size: 1.3rem;
     z-index: 2;
    
     color: #000;
 }
+
 .borderUP #search-overlay{
     position: absolute;
     display: flex;
@@ -164,7 +179,7 @@ transition: opacity 0.3s ease-in-out;
     width: 100px;
     height: 70px;
     right: 5%;
-    gap: 30px;
+    gap: 25px;
 }
 .allUP a {
     color: #fff;
@@ -188,13 +203,21 @@ transition: opacity 0.3s ease-in-out;
 .promo-border::-webkit-scrollbar{
     height: 3px
 }
+.promo-border .scroll-promo a{
+    background: #fff;
+    overflow: hidden;
+}
 .promo {
    
     width: min(40vw, 300px); 
     height: min(35vw, 250px);
-    background: #fff;
     flex-shrink: 0;
+    cursor: pointer;
+
     
+}
+.promo-border .promo:hover{
+    transform: scale(1.1);
 }
 .scroll-promo{
     display: flex;
@@ -371,14 +394,21 @@ main .text-rtx{
     height:clamp(100px,300px, 400px);
     width: clamp(150px,250px, 350px);
     text-decoration:none;
+    overflow: hidden;
+    background: #ffffff;
 }
 .KATEGORI a img{
-    background: #ffffff;
+
     object-fit: cover;
     overflow: hidden;
     height: 100%;
     width: 100%;
+
    
+
+}
+.KATEGORI a img:hover {
+    transform: scale(1.1);
 
 }
 .KATEGORI a button{
@@ -389,6 +419,7 @@ main .text-rtx{
     font-size: 15px;
     cursor: pointer;
     text-decoration: underline;
+    padding-bottom: 20px;
   
 }
 .KATEGORI a button:hover {
@@ -430,42 +461,20 @@ main .text-rtx{
     border-radius: 10px; 
     }
 
-.ABOUT-US .bungkus a {
+.ABOUT-US .bungkus a{
     font-size: 15px;
     padding-top: 15px;
     color: #fff;
 
 }
+p, h1{
+    cursor: default;
+}
+
 .ABOUT-US .bungkus a:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 footer{
