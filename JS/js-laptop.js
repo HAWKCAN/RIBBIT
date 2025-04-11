@@ -11,13 +11,13 @@ function toggleMenu() {
     }
   }
   
-window.addEventListener("scroll",function(){
-    const header = document.getElementById("JUDUL-GANTI");
-    if (window.scrollY > 200) {
-        header.textContent = "L A P T O P";
-        header.style.transform="translateY(-5px)";
-    } else {
-        header.textContent =" R I B B I T " ;
-        header.style.transform="translateY(0)";
-    }
-});
+// window.addEventListener("scroll",function(){
+//     const header = document.getElementById("JUDUL-GANTI");
+//     if (window.scrollY > 200) {
+//         header.textContent = "L A P T O P";
+//         header.style.transform="translateY(-5px)";
+//     } else {
+//         header.textContent =" R I B B I T " ;
+//         header.style.transform="translateY(0)";
+//     }
+// });

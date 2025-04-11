@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="/ASET/KATEGORI/RIBBIT.png" sizes="16x16" />
     <title>RIBBIT</title>
     <script src="../JS/JAVA.js"></script>
+    <script src="../JS/js-Search-Logic.js"></script>
 </head>
 <body>
 
@@ -23,14 +24,33 @@
 
         <div id="search-overlay" class="search-bar">
             <button id="hilang" class="fa-solid fa-x" onclick="toggleMenu()"></button>
-            <input type="text"  placeholder="Search">
+            <form action="/search/" method="get">
+            <input type="text" name="keyword" placeholder="Search">
+        
+            </form>
         </div>
 
         <div class="allUP">
             <a href=""> <i id="up1"class="fa-solid fa-comment"></i> </a>
-            <a href=""> <i class="fa-solid fa-cart-shopping"></i>  </a>
-            <a href="LOGIN-PAGE.html"|> <i class="fa-solid fa-user"></i>    </a>
+            <a href="../HTML/KERANJANG.html"> <i class="fa-solid fa-cart-shopping"></i>  </a>
+
+            <div id="guestUI">
+                <a href="/HTML/LOGIN-PAGE.html"><i class="fa-solid fa-user"></i></a>
+              </div>
+              
+              <!-- Untuk user yang sudah login -->
+            <div id="userUI" style="display: none;">
+          
+                <a href="/HTML/PROFILE.html" class="profile-btn">
+                  <img src="../ASET/KATEGORI/KEYBOARD.png" alt="user" class="profile-img" />
+                </a>
+                <span id="welcomeText"></span>
+                <button id="button-logout" onclick="logout()">Logout</button>
+               
+              </div>
         </div>
+   
+
     </div>
 
     <!-- ini buat kategori -->
@@ -62,7 +82,7 @@
         <a href="https://shopee.co.id/"><button >DISCOVER MORE</button></a>
         </div>
     </div>
-    
+    <br>
     <div class="KATEGORI"> 
 
         <a href="../HTML/Bracket.html">
@@ -110,12 +130,12 @@
             <button>DRAWING PAD</button>
         </a>
         
-        <a href="halaman-tujuan.html">
+        <a href="../HTML/Webcam.html">
             <img src="../ASET/KATEGORI/WEBCAM.webp" alt="Webcam">
             <button>WEBCAM</button>
         </a>
         
-        <a href="halaman-tujuan.html">
+        <a href="../HTML/Wheel.html">
             <img src="../ASET/KATEGORI/WHEEL.png" alt="Steering Wheel">
             <button>WHEEL</button>
         </a>
@@ -132,8 +152,8 @@
             <h1> 
                 ABOUT US
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum at molestiae vero expedita sint blanditiis, quaerat debitis, ab quam, doloremque nesciunt nobis ipsum qui adipisci illo numquam esse quas aut.</p>
-            <a href="#">READ MORE</a>
+            <p>Ribbit is a trusted retailer of high-quality computer accessories. We provide reliable solutions for both everyday users and tech enthusiasts</p>
+            <a href="../HTML/AboutUs.html">READ MORE</a>
         </div>
 
     </div>
@@ -153,32 +173,55 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
-        <ul>
-            <li>HALO</li>
-            <li>APA</li>
-            <li>KABAR</li>
-            <li>NYA</li>
-        </ul>
+     
+        <div class="footer-about" > 
+            <div class="border-footer-about">
+                <img src="../ASET/KATEGORI/RIBBIT.png" alt="logo.ribbit" class="logo">
+                <span>RIBBIT</span>
+             
+            </div><br>
+            <p>Ribbit is a trusted retailer of high-quality computer accessories. We provide reliable solutions for both everyday users and tech enthusiasts</p>
+            <a href="#" class="btn">READ MORE</a>
+            <p class="copyright">
+                &copy; 2025 <strong>Ribbit</strong>. All rights reserved.
+              </p>
+
+        </div>
+        <div class="footer-kategori">
+            <p>CATEGORI</p> <br>
+            <div class="list-footer-kategori" >
+                <ul>
+                    <li><a href="../HTML/Bracket.html">Bracket</a></li>
+                    <li><a href="../HTML/Disk.html">Disk (Flash Disk)</a></li>
+                    <li><a href="../HTML/Headset.html">Headset</a></li>
+                    <li><a href="../HTML/Keyboard.html">Keyboard</a></li>
+                    <li><a href="../HTML/Laptop.html">Laptop</a></li>
+                    <li><a href="../HTML/Mouse.html">Mouse</a></li>
+                    <li><a href="../HTML/Speaker.html">Speaker</a></li>
+                    <li><a href="../HTML/Mousepad.html">Mousepad</a></li>
+                    <li><a href="../HTML/drawingpad.html">Drawing Pad (Pen Tablet)</a></li>
+                    <li><a href="../HTML/Webcam.html">Webcam</a></li>
+                    <li><a href="../HTML/Wheel.html">Wheel (Steering Wheel)</a></li>
+                    <li><a href="../HTML/Gamepad.html">Gamepad</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-contact"> 
+            <p>CONTACT US</p>
+            <div class="list-footer-contact">
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a> R I B B I T</li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a> R I B B I T</li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a> R I B B I T</li>
+                    <li><a href="https://www.youtube.com/@HAWKCAN"><i class="fab fa-youtube"></i></a> R I B B I T</li>
+                </ul>
+            </div>
+        </div>
+
+    
     </footer>
 
 

@@ -19,7 +19,8 @@ body {
     height: 100vh;
 }
 
-#border-login {
+
+#loginform{
     position: relative;
     display: flex;
     justify-content: center;
@@ -57,8 +58,8 @@ body {
     outline: none;
     width: 100%;
     background: transparent;
-
-
+    color: white;
+   
 }
 .checkbox-container {
     display: flex;
@@ -79,6 +80,7 @@ body {
 
 input::placeholder {
     color:#ffffff;
+    background: transparent;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
   }
@@ -105,9 +107,10 @@ input::placeholder {
     background: #d8d8d8;
     
 }
-.LOGIN-BUTTON a button {
+.LOGIN-BUTTON  button {
     border: none;
     background: none;
+      width: 80%;
 }
 .have-account {
     display: flex;
@@ -130,3 +133,7 @@ input::placeholder {
 
     font-size: 20px;
  }
+ #msg {
+    position: absolute;
+   bottom: 20px;
+}

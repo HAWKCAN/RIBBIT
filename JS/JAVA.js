@@ -11,23 +11,21 @@ function toggleMenu() {
   }
 }
 
-// const sliderController = (function() {
-//   let index = 1;
-//   const imagesPerView = 1;
-  
-//   function geser(arah) {
-//       const slider = document.querySelector(".scroll-promo");
-//       const totalImages = document.querySelectorAll(".scroll-promo img").length;
-//       const maxIndex = totalImages - imagesPerView;
-      
-//       if (arah === 'kanan') {
-//           index = (index + imagesPerView) % (maxIndex + imagesPerView);
-//       } else {
-//           index = (index - imagesPerView + (maxIndex + imagesPerView)) % (maxIndex + imagesPerView);
-//       }
-      
-//       slider.style.transform = `translateX(${-index * 218}px)`;
-//   }
-  
-//   return { geser };
-// })();
+window.onload = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  console.log("User dari localStorage:", user);
+
+  if (user && user.USERNAME) {
+      document.getElementById("userUI").style.display = "block";
+      document.getElementById("guestUI").style.display = "none";
+      document.getElementById("welcomeText").textContent = `HALLO, ${user.USERNAME}`;
+  } else {
+      document.getElementById("userUI").style.display = "none";
+      document.getElementById("guestUI").style.display = "block";
+  }
+};
+
+function logout() {
+  localStorage.removeItem('user');
+  window.location.href = '/HTML/LOGIN-PAGE.html';
+}

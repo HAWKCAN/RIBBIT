@@ -6,38 +6,75 @@
     
 } 
 body{
-    width: 100%;
     max-width: 100vw;
+    max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    font-family:'Times New Roman', Times, serif
-
+    font-family:'Times New Roman', Times, serif;
+    
 }
 html {
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Responsif untuk HP */
 @media screen and (max-width: 768px) {
-   /* .promo_kanan, .promo_kiri {
-        width: 40px;  
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .promo_kanan {
-        left: 85%;  
-    }
-
-    .promo_kiri {
-        right: 85%;
-    }
-*/
+  
+        footer {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+          height: auto;
+          gap: 40px;
+        }
+      
+        .footer-about {
+          width: 100%;
+          margin-right: 0;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .border-footer-about {
+          flex-direction: column;
+          gap: 10px;
+        }
+      
+        .footer-kategori {
+          width: 100%;
+          align-items: center;
+        }
+      
+        .footer-kategori .list-footer-kategori {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          gap: 8px;
+        }
+      
+        .footer-kategori .list-footer-kategori a {
+          padding-top: 0;
+        }
+      
+        .footer-about .btn {
+          padding-top: 10px;
+          font-size: 18px;
+        }
+      
+        .footer-about .copyright {
+          font-size: 14px;
+          padding-top: 20px;
+        }
+      }
+      
 
     .allUP {
         gap: 5px;
     }
-}
+
 
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
@@ -60,10 +97,15 @@ html {
     .allUP {
         gap: 5px;
     }
+    /* #button-logout{
+        padding-right: 100px;
+    } */
 }
 /* Mengatur scrollbar untuk seluruh halaman */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
+    z-index: 1000;
 }
 /* jalur scrollbar */
 ::-webkit-scrollbar-track {
@@ -170,6 +212,54 @@ transition: opacity 0.3s ease-in-out;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
+#userUI{
+    /* position: fixed; */
+    display: flex;
+    align-items: center;
+
+
+
+}
+#userUI a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+#userUI #welcomeText{
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(70px, 25vw, 150px);
+    height: clamp(25px, 4vh, 40px);
+    font-size: clamp(12px, 2.5vw, 16px);
+    top: 80px;
+    right: 170px;
+    color: #000000;
+    border: 2PX solid #ff7e5f;
+    background-color: #ecd29a;
+    padding: 5px;
+    border-radius: 25px;
+
+}
+#button-logout {
+    /* position: relative;*/
+    top: 80px;
+    /* right: 70px; */
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(12px, 2.5vw, 16px);
+    border: 2px solid #ff5e62;
+    background-color: #feb47b;
+    border-radius: 25px;
+    padding: 10px;
+    width: clamp(70px, 25vw, 80px);
+    height: clamp(25px, 4vh, 40px); 
+}
+
+
 
 .allUP{
     position: absolute;
@@ -185,6 +275,7 @@ transition: opacity 0.3s ease-in-out;
     color: #fff;
     font-size: 15px;
 }
+
 .promo-border{
     position: relative;
     display: flex;
@@ -201,7 +292,7 @@ transition: opacity 0.3s ease-in-out;
 
 }
 .promo-border::-webkit-scrollbar{
-    height: 3px
+    height: 5px
 }
 .promo-border .scroll-promo a{
     background: #fff;
@@ -449,26 +540,31 @@ main .text-rtx{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: min(90%, clamp(150px, 55vw, 300px)); /* Responsif dengan max 90% layar */
-    height: min(90%, clamp(100px, 45vh, 250px)); /* Responsif dengan max 90% layar */
+    width: min(90%, clamp(150px, 60vw, 400px)); 
+    height: min(90%, clamp(100px, 55vh, 350px));
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    gap: 10px;
-    color: #000000;
+    gap: 30px;
+    color:#fff;
     background: transparent;
     backdrop-filter: blur(10px); 
     border-radius: 10px; 
     }
 
 .ABOUT-US .bungkus a{
-    font-size: 15px;
+    font-size: 20px;
     padding-top: 15px;
     color: #fff;
 
 }
-p, h1{
+h1{
     cursor: default;
+    font-size: clamp(10px,3vw,40px);
+}
+p{
+    cursor: default;
+    font-size: clamp(10px,2vw,25px);
 }
 
 .ABOUT-US .bungkus a:hover {
@@ -481,20 +577,76 @@ footer{
     position: relative;
     display: flex;
     justify-content: center;
-
-    height: 70vh;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
     width: 100vw;
     background: #000000;
     color: #fff;
+    padding: 100px 200px 0 150px;
+ 
 
 }
-footer ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  padding-top: 30px;
+.footer-about {
+ display: flex;
+ align-items: start;
+ flex-direction: column;
+ width: 30%;
+ margin-right: -200px;
+
+}
+.border-footer-about{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-about .copyright {
+    position: absolute;
+    text-align: center;
+    color: #888;
+    font-size: 20px;
+    bottom: 10px;
+    /* padding-bottom: 50px; */
 
 
+}
+.footer-about .border-footer-about span{
+    font-size: 1.5rem;
+}
+.footer-about .border-footer-about .logo {
+    width: 100px;
+    border-radius: 30px;
+
+} 
+.footer-about .btn{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.footer-about .btn:hover{
+    transform: scale(1.05);
+}
+.footer-kategori {
+    display: flex;
+    flex-direction: column;
+    font-size:1.2rem;
+
+}
+.footer-kategori .list-footer-kategori a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 60px;
+}
+
+.footer-contact .list-footer-contact {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 25px;
+}
+.footer-contact .list-footer-contact i {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 5px;
 }

@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="/ASET/KATEGORI/RIBBIT.png" sizes="16x16" />
     <title>RIBBIT</title>
     <script src="../JS/js-disk.js"></script>
+    <script src="../JS/js-Search-Logic.js"></script>
 </head>
 <body>
 
@@ -23,7 +24,10 @@
 
         <div id="search-overlay" class="search-bar">
             <button id="hilang" class="fa-solid fa-x" onclick="toggleMenu()"></button>
-            <input type="text"  placeholder="Search">
+            <form action="/search/" method="get">
+            <input type="text" name="keyword" placeholder="Search">
+        
+            </form>
         </div>
 
         <div class="allUP">
@@ -107,12 +111,54 @@
     </div>
     
     <footer>
-        <ul>
-            <li>HALO</li>
-            <li>APA</li>
-            <li>APA</li>
-            <li>KABAR</li>
-        </ul>
+     
+        <div class="footer-about" > 
+            <div class="border-footer-about">
+                <img src="../ASET/KATEGORI/RIBBIT.png" alt="logo.ribbit" class="logo">
+                <span>RIBBIT</span>
+             
+            </div><br>
+            <p>Ribbit is a trusted retailer of high-quality computer accessories. We provide reliable solutions for both everyday users and tech enthusiasts</p>
+            <a href="#" class="btn">READ MORE</a>
+            <p class="copyright">
+                &copy; 2025 <strong>Ribbit</strong>. All rights reserved.
+              </p>
+
+        </div>
+        <div class="footer-kategori">
+            <p>CATEGORI</p> <br>
+            <div class="list-footer-kategori" >
+                <ul>
+                    <li><a href="../HTML/Bracket.html">Bracket</a></li>
+                    <li><a href="../HTML/Disk.html">Disk (Flash Disk)</a></li>
+                    <li><a href="../HTML/Headset.html">Headset</a></li>
+                    <li><a href="../HTML/Keyboard.html">Keyboard</a></li>
+                    <li><a href="../HTML/Laptop.html">Laptop</a></li>
+                    <li><a href="../HTML/Mouse.html">Mouse</a></li>
+                    <li><a href="../HTML/Speaker.html">Speaker</a></li>
+                    <li><a href="../HTML/Mousepad.html">Mousepad</a></li>
+                    <li><a href="../HTML/drawingpad.html">Drawing Pad (Pen Tablet)</a></li>
+                    <li><a href="../HTML/Webcam.html">Webcam</a></li>
+                    <li><a href="../HTML/Wheel.html">Wheel (Steering Wheel)</a></li>
+                    <li><a href="../HTML/Gamepad.html">Gamepad</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-contact"> 
+            <p>CONTACT US</p>
+            <div class="list-footer-contact">
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a> R I B B I T</li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a> R I B B I T</li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a> R I B B I T</li>
+                    <li><a href="https://www.youtube.com/@HAWKCAN"><i class="fab fa-youtube"></i></a> R I B B I T</li>
+                </ul>
+            </div>
+        </div>
+
+    
     </footer>
     
 

@@ -19,7 +19,7 @@ window.addEventListener("scroll",function(){
       
     
     }else {
-        header.textContent ="R A B B I T";
+        header.textContent ="R I B B I T";
         header.style.transform = "translateY(0)"; 
     }
 });

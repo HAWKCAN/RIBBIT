@@ -1,0 +1,591 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Biar padding ga nambah ukuran elemen */
+    
+} 
+body{
+    width: 100%;
+    max-width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family:'Times New Roman', Times, serif
+
+}
+html {
+    overflow-x: hidden;
+}
+
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+  
+        footer {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+          height: auto;
+          gap: 40px;
+        }
+      
+        .footer-about {
+          width: 100%;
+          margin-right: 0;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .border-footer-about {
+          flex-direction: column;
+          gap: 10px;
+        }
+      
+        .footer-kategori {
+          width: 100%;
+          align-items: center;
+        }
+      
+        .footer-kategori .list-footer-kategori {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          gap: 8px;
+        }
+      
+        .footer-kategori .list-footer-kategori a {
+          padding-top: 0;
+        }
+      
+        .footer-about .btn {
+          padding-top: 10px;
+          font-size: 18px;
+        }
+      
+        .footer-about .copyright {
+          font-size: 14px;
+          padding-top: 20px;
+        }
+      }
+      
+
+    .allUP {
+        gap: 5px;
+    }
+
+
+/* Responsif untuk layar sangat kecil (≤480px) */
+@media screen and (max-width: 480px) {
+    /* .promo_kanan, .promo_kiri {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .promo_kanan {
+        left: 90%;
+    }
+
+    .promo_kiri {
+        right: 90%;
+    } */
+    .borderUP .judul h1 {
+        font-size: 15px;
+    }
+    .allUP {
+        gap: 5px;
+    }
+}
+/* Mengatur scrollbar untuk seluruh halaman */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* jalur scrollbar */
+::-webkit-scrollbar-track {
+    background:#d9d9dc; 
+    border-radius: 10px; 
+}
+
+/* Handle (bagian yang bisa digeser) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect pada handle scrollbar */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+    
+}
+.borderUP{
+    background: #ecd29a;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.borderUP .judul{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50% );
+    visibility: visible;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+
+/* .scrolled {
+    background-color: #800080;
+    transform: scale(1.1);
+} */
+.borderUP .judul a{
+    text-decoration: none;
+}
+.borderUP .judul h1{
+
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3rem;
+    z-index: 2;
+   
+    color: #000;
+}
+
+.borderUP #search-overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.borderUP #search-overlay.show{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.borderUP #search-overlay.search-bar input {
+    position:absolute;
+    display: inline;
+    width: 55%;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 10%;
+    border-radius: 25px;
+    height: 30px;
+    border-color: transparent;
+    padding-left: 2%;
+}
+.borderUP button.hidden{
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+
+.borderUP button{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 20%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.allUP{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 70px;
+    right: 5%;
+    gap: 25px;
+}
+.allUP a {
+    color: #fff;
+    font-size: 15px;
+}
+.promo-border{
+    position: relative;
+    display: flex;
+    padding-top: 140px;
+    height: clamp(100px,450px,100%);
+    padding-bottom: 60px;
+    width: 100%;
+    background: #d9d9dc;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+
+}
+.promo-border::-webkit-scrollbar{
+    height: 5px
+}
+.promo-border .scroll-promo a{
+    background: #fff;
+    overflow: hidden;
+}
+.promo {
+   
+    width: min(40vw, 300px); 
+    height: min(35vw, 250px);
+    flex-shrink: 0;
+    cursor: pointer;
+
+    
+}
+.promo-border .promo:hover{
+    transform: scale(1.1);
+}
+.scroll-promo{
+    display: flex;
+    gap: 80px;
+    width:100%;
+    min-width: max-content;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
+    align-items: center;
+   justify-content: flex-start;
+   /* scroll-behavior: smooth; */
+   overflow-y: hidden;
+
+}
+
+/* .promo_kanan {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-color: #fff;
+    border-radius: 100%;
+    font-size: 25px;
+    cursor: pointer;
+}
+.promo_kanan:hover{
+    background: #c3e9ff; 
+    transform: scale(1.05); 
+
+}
+
+.promo_kiri {
+    position: absolute;
+    right: 80%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-color: #fff;
+    border-radius: 100%;
+    font-size: 25px;
+    cursor: pointer;
+}
+.promo_kiri:hover{
+    background: #c3e9ff; 
+    transform: scale(1.05); 
+
+} */
+.promo-text {
+    position:relative;
+    display: flex;
+    z-index: 4;
+    align-items: start;
+    justify-content: center;
+    border: none;
+    height: 100px;
+    background: #d9d9dc;
+   
+}
+.promo-text button {
+    background: #e9eef0; 
+    border: none; 
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+.promo-text button:hover {
+    background: #c3e9ff; 
+    transform: scale(1.05); 
+}
+.border-back  {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #000000;
+    height: 100%;
+    z-index: 100;
+
+
+}.border-back img{
+    width: 100%;
+      
+}
+.border-back .discover{
+    width:200px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    text-decoration: none;
+    border: none;
+    z-index: 2;
+    color: white;
+    gap: 10px;
+}
+.border-back button {
+    backdrop-filter: blur(25px);
+    border-width: 2px;
+    border-color: white;
+    background: transparent;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.border-back button:hover {
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    background-image: url("../ASET/rtx2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50% 0px 0px 0px;
+    height: 100vh;
+    width: 100%;
+}
+
+main .text-rtx{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-12%, -20%);
+    text-align: center;
+    left: 10%;
+    top: 50%;
+    color: #fff;
+}
+
+.READMORE-RTX button {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+}
+
+.READMORE-RTX button:hover { 
+    transform: scale(1.05); 
+}
+
+.KATEGORI {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    gap: 50px;
+    background: #d9d9dc;
+    
+}
+.KATEGORI a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height:clamp(100px,300px, 400px);
+    width: clamp(150px,250px, 350px);
+    text-decoration:none;
+    overflow: hidden;
+    background: #ffffff;
+}
+.KATEGORI a img{
+
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+   
+
+}
+.KATEGORI a img:hover {
+    transform: scale(1.1);
+
+}
+.KATEGORI a button{
+    width: 100px;
+    background: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-bottom: 20px;
+  
+}
+.KATEGORI a button:hover {
+    transform: scale(1.05);
+
+    color: #ecd29a;
+}
+.ABOUT-US {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+    width: 100%;
+    padding: 50% 0 0 0;
+    background-image: url("../ASET/KATEGORI/BACKGROUND-ABOUT.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ABOUT-US .bungkus {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(90%, clamp(150px, 55vw, 400px)); 
+    height: min(90%, clamp(100px, 45vh, 350px));
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+    color:#fff;
+    background: transparent;
+    backdrop-filter: blur(10px); 
+    border-radius: 10px; 
+    }
+
+.ABOUT-US .bungkus a{
+    font-size: 20px;
+    padding-top: 15px;
+    color: #fff;
+
+}
+h1{
+    cursor: default;
+    font-size: clamp(10px,3vw,40px);
+}
+p{
+    cursor: default;
+    font-size: clamp(10px,2vw,25px);
+}
+
+.ABOUT-US .bungkus a:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
+    width: 100vw;
+    background: #000000;
+    color: #fff;
+    padding: 100px 200px 0 150px;
+ 
+
+}
+.footer-about {
+ display: flex;
+ align-items: start;
+ flex-direction: column;
+ width: 30%;
+ margin-right: -200px;
+
+}
+.border-footer-about{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-about .copyright {
+    position: absolute;
+    text-align: center;
+    color: #888;
+    font-size: 20px;
+    bottom: 10px;
+    padding-bottom: 50px;
+
+
+}
+.footer-about .border-footer-about span{
+    font-size: 1.5rem;
+}
+.footer-about .border-footer-about .logo {
+    width: 100px;
+    border-radius: 30px;
+
+} 
+.footer-about .btn{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.footer-about .btn:hover{
+    transform: scale(1.05);
+}
+.footer-kategori {
+    display: flex;
+    flex-direction: column;
+    font-size:1.2rem;
+
+}
+.footer-kategori .list-footer-kategori a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 60px;
+}
