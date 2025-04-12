@@ -6,7 +6,8 @@ const db = mysql.createConnection({
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASS || '',
   database: process.env.DB_NAME || 'RIBBIT',
-  port: process.env.DB_PORT || 3306
+  port: process.env.DB_PORT || 3306,
+  protocol: process.env.DB_PROTOCOL
 });
 
 db.connect(err => {
