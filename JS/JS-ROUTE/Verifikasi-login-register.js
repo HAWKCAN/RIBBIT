@@ -1,7 +1,8 @@
 const express = require ('express');
 const router = express.Router();
 const db = require ('../JS-DATABASE/DB-KONEKSI.js');
-const bcrypt = require ('bcrypt');
+const bcrypt = require('bcryptjs');
+
 console.log('__dirname:', __dirname);
 
 
