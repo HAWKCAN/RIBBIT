@@ -1,4 +1,5 @@
 const express = require ('express');
+require('dotenv').config(); 
 // const session = require('express-session');
 const app = express();
 const path = require ('path');
@@ -29,9 +30,9 @@ app.get('/' , (req,res) => {
 
 
 
-app.listen (3000 ,() => {
-    console.log('server udah nyala di http://localhost:3000');
-
+const PORT = process.env.PORT || 3000; 
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 
