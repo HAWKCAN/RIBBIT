@@ -43,8 +43,9 @@ router.post('/register', (req, res) => {
 
 //UNTUK LOGIN
 router.post('/login', (req, res) => {
-    console.log("Login request body:", req.body);
+   
     const { USERNAME, PASSWORD } = req.body;
+    console.log("Login request body:",USERNAME);
 
     const sql = 'SELECT * FROM `user` WHERE USERNAME = ?';
     db.query(sql, [USERNAME], (err, results) => {
