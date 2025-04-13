@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "wheel": "../HTML/Wheel.html",
             "bracket": "../HTML/Bracket.html",
             "keyboard" :"../HTML/Keyboard.html",
-            "monitor" :"#",
+            "monitor" :"../HTML/Monitor.html",
             "rtx" : "../HTML/RTX.html"
         };
 
