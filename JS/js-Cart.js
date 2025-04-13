@@ -18,7 +18,7 @@ window.addEventListener("scroll",function(){
         header.style.transform = "translateY(-5px)"; 
     
     }else {
-        header.textContent ="R A B B I T";
+        header.textContent ="R I B B I T";
         header.style.transform = "translateY(0)"; 
     }
 });
