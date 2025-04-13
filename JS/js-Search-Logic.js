@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "webcam": "../HTML/Webcam.html",
             "wheel": "../HTML/Wheel.html",
             "bracket": "../HTML/Bracket.html",
-            "keyboard" :"../HTML/Keyboard.html"
+            "keyboard" :"../HTML/Keyboard.html",
+            "monitor" :"#",
+            "rtx" : "../HTML/RTX.html"
         };
 
         const productKeywords = {

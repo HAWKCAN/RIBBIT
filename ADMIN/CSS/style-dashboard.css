@@ -314,6 +314,7 @@ transition: opacity 0.3s ease-in-out;
     border: none;
     height: 100px;
     background: #d9d9dc;
+
    
 }
 .promo-text button {
@@ -342,7 +343,7 @@ transition: opacity 0.3s ease-in-out;
 
 
 }.border-back img{
-    width: 100%;
+    width: 100vw;
       
 }
 .border-back .discover{
