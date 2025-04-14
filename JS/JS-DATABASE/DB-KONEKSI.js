@@ -7,14 +7,10 @@ const db = mysql.createConnection({
   password: process.env.DB_PASS || '',
   database: process.env.DB_NAME || 'RIBBIT',
   port: process.env.DB_PORT || 3306,
-  // ssl: {
-  //   rejectUnauthorized: false // Pastikan SSL diaktifkan jika diperlukan
-  // }
-
+  ssl: process.env.DB_HOST.includes('railway') ? { rejectUnauthorized: false } : undefined, // SSL jika diperlukan di Railway
+  allowPublicKeyRetrieval: true,  
 });
-// const connection = mysql.createConnection({
-//   uri: process.env.DB_URL // Gunakan variabel .env
-// });
+
 
 
 db.connect(err => {
