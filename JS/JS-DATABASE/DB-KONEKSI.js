@@ -7,9 +7,9 @@ const db = mysql.createConnection({
   password: process.env.DB_PASS || '',
   database: process.env.DB_NAME || 'RIBBIT',
   port: process.env.DB_PORT || 3306,
-  ssl: {
-    rejectUnauthorized: false // Pastikan SSL diaktifkan jika diperlukan
-  }
+  // ssl: {
+  //   rejectUnauthorized: false // Pastikan SSL diaktifkan jika diperlukan
+  // }
 
 });
 // const connection = mysql.createConnection({
