@@ -7,8 +7,9 @@ const db = mysql.createConnection({
   password: process.env.DB_PASS || '',
   database: process.env.DB_NAME || 'RIBBIT',
   port: process.env.DB_PORT || 3306,
-  ssl: process.env.DB_HOST.includes('railway') ? { rejectUnauthorized: false } : undefined, // SSL jika diperlukan di Railway
-  allowPublicKeyRetrieval: true,  
+  ssl: {
+    rejectUnauthorized: true // WAJIB true untuk Railway
+  }
 });
 
 
