@@ -1,16 +1,15 @@
-function toggleMenu(){
+function toggleMenu() {
     var searchOverlay = document.getElementById("search-overlay");
-    var button = document.getElementBtId("sembunyi");
-
-    if (searchOverlay.classList.contains("show"))  {
+    var button = document.getElementById("sembunyi");
+  
+    if (searchOverlay.classList.contains("show")) {
         searchOverlay.classList.remove("show");
         button.classList.remove("hidden");
     } else {
         searchOverlay.classList.add("show");
-        button.clasList.add("hidden");
+        button.classList.add("hidden");
     }
-}
-
+  }
 window.addEventListener("scroll",function(){
     const header = document.getElementById("JUDUL-GANTI");
     if (window.scrollY >180){

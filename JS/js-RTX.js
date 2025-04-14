@@ -10,10 +10,11 @@ function toggleMenu() {
         button.classList.add("hidden");
     }
   }
+
 window.addEventListener("scroll",function(){
     const header = document.getElementById("JUDUL-GANTI");
     if (window.scrollY >350){
-        header.textContent ="W H E E L"
+        header.textContent ="GeForce R T X"
         header.style.transform = "translateY(-5px)"; 
     
     }else {

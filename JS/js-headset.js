@@ -10,7 +10,6 @@ function toggleMenu() {
         button.classList.add("hidden");
     }
   }
-
 window.addEventListener("scroll",function(){
     const header = document.getElementById("JUDUL-GANTI");
     if (window.scrollY >180){
