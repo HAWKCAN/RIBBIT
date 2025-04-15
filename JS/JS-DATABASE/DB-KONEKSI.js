@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mysql = require('mysql2');
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASS || '',
@@ -9,17 +9,11 @@ const db = mysql.createConnection({
   port: process.env.DB_PORT || 3306,
   ssl: {
     rejectUnauthorized: false // WAJIB true untuk Railway
-  }
+  },
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-
-
-db.connect(err => {
-  if (err) {
-    console.error('Gagal koneksi ke database:', err);
-  } else {
-    console.log('TERHUBUNG KE MYSQL');
-  }
-});
 
 module.exports = db;
