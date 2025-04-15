@@ -21,8 +21,8 @@
         font-size: 2rem!important;
     }
 
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 180% !important;
+    .content h3 {
+        font-size: rem !important;
     }
 
 }

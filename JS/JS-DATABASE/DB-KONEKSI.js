@@ -8,12 +8,21 @@ const db = mysql.createPool({
   database: process.env.DB_NAME || 'RIBBIT',
   port: process.env.DB_PORT || 3306,
   ssl: {
-    rejectUnauthorized: false // WAJIB true untuk Railway
+    rejectUnauthorized: false // Aktif kalau Railway perlu SSL
   },
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
 
+// Cek apakah koneksi berhasil
+db.getConnection((err, connection) => {
+  if (err) {
+    console.error('❌ Gagal koneksi ke database:', err.message);
+  } else {
+    console.log('✅ Terkoneksi ke MySQL dengan pool!');
+    connection.release();
+  }
+});
 
 module.exports = db;
