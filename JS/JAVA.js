@@ -1,3 +1,4 @@
+
 function toggleMenu() {
   var searchOverlay = document.getElementById("search-overlay");
   var button = document.getElementById("sembunyi");
@@ -12,20 +13,21 @@ function toggleMenu() {
 }
 
 window.onload = () => {
-  const user = JSON.parse(localStorage.getItem('user'));
-  console.log("User dari localStorage:", user);
-
-  if (user && user.USERNAME) {
-      document.getElementById("userUI").style.display = "block";
-      document.getElementById("guestUI").style.display = "none";
-      document.getElementById("welcomeText").textContent = `HALLO, ${user.USERNAME}`;
-  } else {
-      document.getElementById("userUI").style.display = "none";
-      document.getElementById("guestUI").style.display = "block";
-  }
+  fetch('/verifikasi/check-session')
+    .then(response => response.json())
+    .then(data => {
+      if (data.loggedIn) {
+        const user = data.user;
+        document.getElementById("userUI").style.display = "block";
+        document.getElementById("guestUI").style.display = "none";
+        document.getElementById("welcomeText").textContent = `HALLO, ${user.USERNAME}`;
+      } else {
+        document.getElementById("userUI").style.display = "none";
+        document.getElementById("guestUI").style.display = "block";
+      }
+    })
+    .catch(err => {
+      console.error('Gagal cek session:', err);
+    });
 };
 
-function logout() {
-  localStorage.removeItem('user');
-  window.location.href = '/HTML/LOGIN-PAGE.html';
-}

@@ -41,12 +41,19 @@ router.post('/register', (req, res) => {
         });
     });
 });
+router.get('/check-session', (req, res) => {
+    if (req.session && req.session.user) {
+        res.json({ loggedIn: true, user: req.session.user });
+    } else {
+        res.status(401).json({ loggedIn: false });
+    }
+});
 
 //UNTUK LOGIN
 router.post('/login', (req, res) => {
    
     const { USERNAME, PASSWORD } = req.body;
-    console.log("Login request body:",USERNAME);
+    console.log("Login request by:",USERNAME);
 
     const sql = 'SELECT * FROM `user` WHERE USERNAME = ?';
     db.query(sql, [USERNAME], (err, results) => {
@@ -72,10 +79,11 @@ router.post('/login', (req, res) => {
                 return res.status(401).json({ message: 'Password salah.' });
             }
 
-            // req.session.user = {
-            //     USERNAME: user.USERNAME,
-            //     ROLE: user.ROLE
-            // };
+            req.session.user = {
+                USERNAME: user.USERNAME,
+                ROLE: user.ROLE
+            };
+        
 
 
             res.json({
@@ -87,21 +95,15 @@ router.post('/login', (req, res) => {
     });
 });
 
-// // Cek session aktif
-// router.get('/session-check', (req, res) => {
-//     if (req.session.user) {
-//         res.json({ loggedIn: true, user: req.session.user });
-//     } else {
-//         res.json({ loggedIn: false });
-//     }
-// });
-
-// router.post('/logout', (req, res) => {
-//     req.session.destroy(err => {
-//         if (err) return res.status(500).json({ message: 'Gagal logout' });
-//         res.json({ message: 'Logout berhasil' });
-//     });
-// });
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ message: 'Terjadi kesalahan saat logout.' });
+        }
+        res.clearCookie('connect.sid')
+        res.redirect('/login');  // Mengarahkan pengguna ke halaman login
+    });
+});
 
 module.exports = router ;
 

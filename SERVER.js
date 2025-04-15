@@ -1,21 +1,22 @@
 require('dotenv').config(); 
 const express = require ('express');
 const http = require('http');
-
-// const session = require('express-session');
+const session = require('express-session');
 const app = express();
 const path = require ('path');
 
-// app.use(session({
-//     secret: 'rahasiaSuperAman', // taruh di .env nanti
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: { secure: false } // true jika pakai HTTPS
-//   }));
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'rahasiaSuperAman', // Sebaiknya simpan di .env
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false } // Set ke true jika menggunakan HTTPS
+}));
 
 
 const verifikasi_routes = require('./JS/JS-ROUTE/Verifikasi-login-register.js');
-console.log('__dirname:', __dirname);
+console.log('dari:', __dirname);
+
+
 
 app.use (express.json());
 // MENGGUNAKAN ROUTE LOGIN/REGISTER
@@ -26,8 +27,12 @@ app.use ('/CSS', express.static(path.join(__dirname, 'CSS')));
 app.use ('/JS', express.static(path.join(__dirname, 'JS')));
 app.use ('/ASET', express.static(path.join(__dirname,'ASET')) );
 //AUTO KE HOMEPAGE.html PAS AWAL BUKAK WEB
+
 app.get('/' , (req,res) => {
     res.sendFile(path.join(__dirname , 'HTML' , 'HOMEPAGE.html'));
+});
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'HTML', 'LOGIN-PAGE.html'));
 });
 
 

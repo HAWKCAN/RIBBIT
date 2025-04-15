@@ -19,22 +19,14 @@ document.getElementById ("loginform").addEventListener("submit" , async (e) => {
 
     document.getElementById("msg").textContent = data.message;
 
-    // if (res.ok) {
-    //     localStorage.setItem('user' , JSON.stringify ({ USERNAME : data.USERNAME, ROLE : data.ROLE}));
-    //     window.location.href = data.ROLE === 'admin' ? '/ADMIN/HTML/dashboard.html' : '/HTML/HOMEPAGE.html' ;
-    // }
-
+ 
     if (!res.ok) {
         msg.style.color = "red";
         return;
     }
 
-    // Simpan info user ke localStorage
-    localStorage.setItem('user', JSON.stringify({
-        USERNAME: data.USERNAME,
-        ROLE: data.ROLE
-    }));
-
+  
+ 
     msg.style.color = "green";
     msg.textContent = "Login berhasil, redirecting...";
 

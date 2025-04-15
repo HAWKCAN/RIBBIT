@@ -132,12 +132,13 @@
 
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
-
+    .title {
+        /* transform: translate(0%, 30%); */
+        margin-top: 40%;
+    }
     .title h1 {
         font-size: 1.6rem !important;
     }
-
-    
     .content h3 {
         font-size: 1rem !important;
     }
@@ -148,14 +149,16 @@
     .content p {
         font-size: 1rem !important;
         text-align: justify;
-        
     }
-    /* .section {
-        align-items: center!important;
-    } */
+    .text p {
+        width: 80vw !important;
+    }
     .bacaan .image-section {
         position:absolute;
-        transform: translate(13%, -180%);
+        margin-left: 23%;
+        /* padding-left: 150px; */
+        padding: 0%;
+        transform: translate(0%, -220%);
     }
     
     
@@ -415,8 +418,9 @@ transition: opacity 0.3s ease-in-out;
 .image-section img{
     width: auto;
     max-width: 200px;
-    max-height: 200px;
+    max-height: 150px;
     height: auto;
+
   
 
 }
