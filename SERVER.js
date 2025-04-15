@@ -4,12 +4,25 @@ const http = require('http');
 const session = require('express-session');
 const app = express();
 const path = require ('path');
+const MySQLStore = require('express-mysql-session')(session);
+const sessionStore = new MySQLStore({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASS || '',
+  database: process.env.DB_NAME || 'RIBBIT',
+  port: process.env.DB_PORT || 3306
+});
 
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'rahasiaSuperAman', // Sebaiknya simpan di .env
+  key: 'session_id',
+  secret: process.env.SESSION_SECRET || 'rahasiaSuperAman',
+  store: sessionStore,
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false } // Set ke true jika menggunakan HTTPS
+  cookie: {
+    secure: false, // true kalau pakai HTTPS
+    maxAge: 1000 * 60 * 60 * 2 // 2 jam
+  }
 }));
 
 
