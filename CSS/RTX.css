@@ -27,6 +27,36 @@
 
 }
 @media (max-width: 768px) {
+    .section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .content-section {
+        width: 80vw!important;
+        align-items: center!important;
+        padding-right:15px!important;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(98, 98, 98, 0.5);
+        border-radius: 30px;
+        padding: 20px;
+        transform: translate(5%, 0%);
+    }
+    .content-section .title {
+        text-align: center;
+        font-size: 1.7rem!important;
+    }
+    .content p {
+        text-align: justify;
+        font-size: 1.5rem!important;
+
+    }
+    .content h3 {
+        text-align:center;
+        font-size: 1.7rem!important;
+    }
+    .social{
+        align-items: center!important;
+    } 
+
     footer {
         height:auto;
     }
@@ -118,26 +148,35 @@
 
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
-
-    .text-rtx {
-        left: 50%!important;
-        top: 50%!important;
-        transform: translate(-50% ,-50%)!important;
-        width: 60%!important;
-
+    .section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
-    .text-rtx p {
-        font-size: 1rem;
+    .content-section {
+        width: 80vw!important;
+        align-items: center!important;
+        padding-right:15px!important;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(98, 98, 98, 0.5);
+        border-radius: 30px;
+        padding: 20px;
+        transform: translate(5%, 0%);
+    }
+    .content-section .title {
         text-align: center;
+        font-size: 1rem!important;
     }
-    .text-rtx h1 {
-        font-size: 1.2rem;
-        text-align: center
+    .content p {
+        text-align: justify;
+        font-size: 0.8rem!important;
+
     }
-    .text-rtx a {
-        font-size: 1.2rem;
-        text-align: center;
+    .content h3 {
+        text-align:center;
+        font-size: 0.9rem!important;
     }
+    .social{
+        align-items: center!important;
+    } 
     .ABOUT-US .bungkus {
         height: 25%!important;
         width:60%!important;
@@ -237,7 +276,7 @@
 }
 .borderUP{
     background: #ecd29a;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     position: fixed;
     display: flex;
@@ -346,6 +385,7 @@ transition: opacity 0.3s ease-in-out;
     background-image: url("../ASET/rtx2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    /* background-position: right; */
 }
 
 .container {
@@ -392,13 +432,19 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .content-section .social {
-    margin: 40px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: auto;
+    /* gap: 40px; */
+    padding: 10px;
+    font-size: 0.5rem;
 }
 
 .content-section .social i{
     color: #ecd29a;
     font-size: 30px;
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
 }
 
 .content-section .social i:hover{

@@ -1,5 +1,6 @@
 require('dotenv').config(); 
 const express = require ('express');
+const http = require('http');
 
 // const session = require('express-session');
 const app = express();
@@ -32,9 +33,8 @@ app.get('/' , (req,res) => {
 
 
 const PORT = process.env.PORT || 3000; 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+
+http.createServer(app).listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
 

@@ -7,9 +7,9 @@ const db = mysql.createPool({
   password: process.env.DB_PASS || '',
   database: process.env.DB_NAME || 'RIBBIT',
   port: process.env.DB_PORT || 3306,
-  ssl: {
-    rejectUnauthorized: false // Aktif kalau Railway perlu SSL
-  },
+  // ssl: {
+  //   rejectUnauthorized: false // Aktif kalau Railway perlu SSL
+  // },
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0

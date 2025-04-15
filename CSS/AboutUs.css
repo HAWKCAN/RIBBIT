@@ -5,6 +5,26 @@
     font-family: Arial, Helvetica, sans-serif
 }
 @media (max-width: 1366px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .content h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .content p {
+        font-size: 0.7rem;
+        width: 105%;
+    }
+
+
+    .content-section .social {
+        display: flex !important;
+        margin: 35px 0px 0px 0px !important;
+        /* padding: 30px 0px !important; */
+    }
+
     .ABOUT-US .bungkus {
         height: 30% !important;
         width: 50% !important;
@@ -20,18 +40,15 @@
     .ABOUT-US .bungkus a {
         font-size: 2rem!important;
     }
-
-    .content h3 {
-        font-size: rem !important;
-    }
-
 }
 @media (max-width: 768px) {
+    .content p {
+        width: 95%;
+    }
+
     footer {
         height:auto;
     }
- 
-
 
     .allUP {
         gap: 5px;
@@ -54,9 +71,6 @@
         font-size: 1rem!important;
     }
 
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 130% !important;
-    }
     
     footer {
         display: flex !important;
@@ -119,24 +133,36 @@
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
 
-    .text-rtx {
-        left: 50%!important;
-        top: 50%!important;
-        transform: translate(-50% ,-50%)!important;
-        width: 60%!important;
+    .title h1 {
+        font-size: 1.6rem !important;
+    }
 
+    
+    .content h3 {
+        font-size: 1rem !important;
     }
-    .text-rtx p {
-        font-size: 1rem;
-        text-align: center;
+    .section {
+        width: 100%!important;
     }
-    .text-rtx h1 {
-        font-size: 1.2rem;
-        text-align: center
+
+    .content p {
+        font-size: 1rem !important;
+        text-align: justify;
+        
     }
-    .text-rtx a {
-        font-size: 1.2rem;
-        text-align: center;
+    /* .section {
+        align-items: center!important;
+    } */
+    .bacaan .image-section {
+        position:absolute;
+        transform: translate(5%, -190%);
+    }
+    
+    
+
+
+    .social i {
+        font-size: 1.5rem !important;
     }
     .ABOUT-US .bungkus {
         height: 25%!important;
@@ -213,6 +239,9 @@
         font-size: 1.2rem;
     }
 
+}
+body {
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -340,31 +369,56 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .section {
+    /* display: block; */
+    position: relative;
     width: 100%;
+    height: auto;
     min-height: 100vh;
+    padding-top: 150px;
     background-color: #fcfae5;
 }
 
-.container {
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding-top: 100px;
-}
+
 
 .content-section {
     float: left;
-    width: 55%;
-}
-
-.image-section {
-    float: right;
-    width: 40%;
-}
-
-.image-section img{
     width: 100%;
+    padding-left: 50px;
+    text-align: justify;
+    /* margin: 0px 10vw; */
+}
+.content {
+    width: 100%;
+}
+
+.bacaan .text {
+    width: 50%;
+}
+.bacaan .text p {
+    margin-top: 10px;
+    color: #3d3d3d;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content .bacaan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+.image-section {
+    padding-right: 150px;
+
+    
+}
+.image-section img{
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
     height: auto;
+  
+
 }
 
 .content-section .title {
@@ -378,16 +432,11 @@ transition: opacity 0.3s ease-in-out;
     font-size: 21px;
 }
 
-.content-section .content p{
-    margin-top: 10px;
-    color: #3d3d3d;
-    font-size: 18px;
-    line-height: 1.5;
 
-}
 
 .content-section .social {
     margin: 40px 40px;
+    padding-bottom: 100px;
 }
 
 .content-section .social i{
@@ -413,7 +462,7 @@ footer {
     background: #000000;
     color: #fff;
     padding: 100px 150px;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .footer-about, .footer-kategori, .footer-contact {

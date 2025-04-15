@@ -152,19 +152,49 @@
     .ABOUT-US .bungkus a{
        font-size:  0.8rem!important;  
       }
+    .section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+      .content-section {
+        width: 80vw!important;
+        align-items: center!important;
+        padding-right:15px!important;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(98, 98, 98, 0.5);
+        border-radius: 30px;
+        padding: 20px;
 
+
+      }
+      .content-section .title {
+        text-align: center;
+        font-size: 1rem!important;
+      }
+      .content p {
+        text-align: justify;
+        font-size: 0.8rem!important;
+
+      }
+      .content h3 {
+        text-align:center;
+        font-size: 0.9rem!important;
+      }
+      .social{
+    align-items: center!important;
+    } 
+   
 
 
 
 
     footer {
+      
         display: flex !important;
         flex-direction: column !important;
         align-items: center;
 
         gap: 40px;
         height: auto;
-        
     }
     .footer-about a.btn {
         font-size: 0.8rem;
@@ -340,8 +370,15 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .section {
-    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
     min-height: 100vh;
+    padding-left: 50px;
+    padding-top: 120px;
+    height: auto;
     /* background-color: #fcfae5; */
     background-image: url("https://images.samsung.com/is/image/samsung/assets/us/monitors/04072025/SDSAC-9124-Monitor-One-Launch-PCD_KV_DT_1440x810.jpg?imwidth=2560");
     background-size: cover;
@@ -351,25 +388,20 @@ transition: opacity 0.3s ease-in-out;
 
 .container {
     width: 50%;
-    display: block;
-    margin: auto;
-    padding-top: 100px;
-    transform: translate(-40%, 20%);
+    height:60%;
+    display: flex;
 }
 
 .content-section {
-    float: left;
-    width: 55%;
+    text-align: justify;
+
+    width: 70%;
 }
 
-.image-section {
-    float: right;
-    width: 40%;
-}
 
 .image-section img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .content-section .title {
@@ -393,13 +425,22 @@ transition: opacity 0.3s ease-in-out;
 }
 
 .content-section .social {
-    margin: 40px 20px;
+    display: flex;
+    margin-top: 40px;
+    width: auto;
+    gap: 50px;
+    padding: 10px;
+    font-size: 0.5rem;
+    /* align-items: center; */
+    
+
+   
 }
 
 .content-section .social i{
     color: #ecd29a;
     font-size: 30px;
-    padding: 0px 30px;
+
 }
 
 .content-section .social i:hover{
