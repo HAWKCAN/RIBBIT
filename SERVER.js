@@ -1,15 +1,29 @@
 require('dotenv').config(); 
 const express = require ('express');
 const http = require('http');
-const session = require('express-session');
+// const session = require('express-session');
 const app = express();
 const path = require ('path');
 
+
+// app.use(session({
+//   secret: process.env.SESSION_SECRET || 'rahasiaSuperAman', // Sebaiknya simpan di .env
+//   resave: false,
+//   saveUninitialized: false,
+//   cookie: { secure: false } // Set ke true jika menggunakan HTTPS
+// }));
+const MongoStore = require('connect-mongo');
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'rahasiaSuperAman', // Sebaiknya simpan di .env
+  secret: process.env.SESSION_SECRET || 'superSecret',
   resave: false,
-  saveUninitialized: false,
-  cookie: { secure: false } // Set ke true jika menggunakan HTTPS
+  saveUninitialized: true,
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017/session-db',
+    ttl: 14 * 24 * 60 * 60, // 14 hari
+  }),
+  cookie: {
+    secure: process.env.NODE_ENV === 'production', // Aktifkan secure cookie di produksi
+  },
 }));
 
 
