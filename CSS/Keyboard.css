@@ -357,7 +357,7 @@ transition: opacity 0.3s ease-in-out;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 600px;
+    min-height: 800px;
     height: auto;
     margin-top: 50px;
 
@@ -383,9 +383,12 @@ transition: opacity 0.3s ease-in-out;
     transform: translate(-50%);
   
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
    
 }
-
+.keterangan_pict1 h1{
+    font-size: 1.5rem;
+}
  .product {
     position: relative;
     height: 100%;
@@ -402,29 +405,28 @@ transition: opacity 0.3s ease-in-out;
     
 
  }
-.product a .promo {
-    width: 220px;
-    height: 200px;
-
-
-}
-.product a .promo:hover {
-    transform: scale(1.1);
-}
-.product a{
+ .product a{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column ;    
     text-decoration: none;
-    /* border: solid;
-    border-width: 1px;
-    border-color: #000; */
-    background: #eeeeef;
-    color: #000;
-    overflow: hidden;
+    border:1px solid #000;
+   
 
  }
+.product a .promo {
+    max-width: 220px;
+    max-height: 200px;
+    height: auto;
+    width: auto;
+
+
+
+}
+.product a .promo:hover {
+    transform: scale(1.05);
+}
  .product .harga{
     font-size: 0.7em;
     display: flex;
@@ -436,36 +438,7 @@ transition: opacity 0.3s ease-in-out;
     background: none;
     border: none;
  }
-.product a .promo {
-    width: 200px;
-    height: 200px;
 
-
-}
-.product a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column ;    
-    text-decoration: none;
-    border: solid;
-    border-width: 1px;
-    border-color: #000;
-
- }
- .product .harga{
-    font-size: 0.7em;
-    display: flex;
-    justify-content: space-around;
-    width: 68%;
-    height: 5%;
-    padding-top: 7px;
- }
-
- .product .harga button {
-    background: none;
-    border: none;
- }
 
 
 

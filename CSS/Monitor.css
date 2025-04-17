@@ -5,57 +5,13 @@
     font-family: Arial, Helvetica, sans-serif
 }
 @media (max-width: 1366px) {
-    .ABOUT-US .bungkus {
-        height: 30% !important;
-        width: 50% !important;
-    }
-    .ABOUT-US .bungkus h1 {
-        font-size: 3rem;   
-    }
-
-    .ABOUT-US .bungkus p {
-        font-size: 2rem;
-    }
-
-    .ABOUT-US .bungkus a {
-        font-size: 2rem!important;
-    }
-
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 180% !important;
-    }
 
 }
 @media (max-width: 768px) {
-    footer {
-        height:auto;
-    }
- 
 
 
     .allUP {
         gap: 5px;
-    }
-
-    .ABOUT-US .bungkus {
-        height: 30% !important;
-        width: 50% !important;
-    }
-
-    .ABOUT-US .bungkus h1 {
-        font-size: 2rem;   
-    }
-
-    .ABOUT-US .bungkus p {
-        font-size: 1.3rem;
-    }
-
-    .ABOUT-US .bungkus a {
-        font-size: 1rem!important;
-    }
-
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 130% !important;
     }
     
     footer {
@@ -119,39 +75,7 @@
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
 
-    .text-rtx {
-        left: 50%!important;
-        top: 50%!important;
-        transform: translate(-50% ,-50%)!important;
-        width: 60%!important;
 
-    }
-    .text-rtx p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .text-rtx h1 {
-        font-size: 1.2rem;
-        text-align: center
-    }
-    .text-rtx a {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-    .ABOUT-US .bungkus {
-        height: 25%!important;
-        width:60%!important;
-        /* padding: 30px; */
-    }
-    .ABOUT-US .bungkus h1{
-        font-size: 1.5rem;
-    }
-    .ABOUT-US .bungkus p {
-        font-size: 0.8rem;
-    }
-    .ABOUT-US .bungkus a{
-       font-size:  0.8rem!important;  
-      }
     .section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }

@@ -16,31 +16,11 @@ html {
     overflow-x: hidden;
 }
 @media (max-width: 1366px) {
-    .ABOUT-US .bungkus {
-        height: 30% !important;
-        width: 50% !important;
-    }
-    .ABOUT-US .bungkus h1 {
-        font-size: 3rem;   
-    }
-
-    .ABOUT-US .bungkus p {
-        font-size: 2rem;
-    }
-
-    .ABOUT-US .bungkus a {
-        font-size: 2rem!important;
-    }
-
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 180% !important;
-    }
+ 
 
 }
 @media (max-width: 768px) {
-    footer {
-        height:auto;
-    }
+
  
 
 
@@ -48,26 +28,6 @@ html {
         gap: 5px;
     }
 
-    .ABOUT-US .bungkus {
-        height: 30% !important;
-        width: 50% !important;
-    }
-
-    .ABOUT-US .bungkus h1 {
-        font-size: 2rem;   
-    }
-
-    .ABOUT-US .bungkus p {
-        font-size: 1.3rem;
-    }
-
-    .ABOUT-US .bungkus a {
-        font-size: 1rem!important;
-    }
-
-    .text-rtx h1, .text-rtx p, .text-rtx a {
-        font-size: 130% !important;
-    }
     
     footer {
         display: flex !important;
@@ -129,40 +89,11 @@ html {
 
 /* Responsif untuk layar sangat kecil (≤480px) */
 @media screen and (max-width: 480px) {
+    .back-riview .keterangan_pict1{
+        gap: 20px;
+        
+    }
 
-    .text-rtx {
-        left: 50%!important;
-        top: 50%!important;
-        transform: translate(-50% ,-50%)!important;
-        width: 60%!important;
-
-    }
-    .text-rtx p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .text-rtx h1 {
-        font-size: 1.2rem;
-        text-align: center
-    }
-    .text-rtx a {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-    .ABOUT-US .bungkus {
-        height: 25%!important;
-        width:60%!important;
-        /* padding: 30px; */
-    }
-    .ABOUT-US .bungkus h1{
-        font-size: 1.5rem;
-    }
-    .ABOUT-US .bungkus p {
-        font-size: 0.8rem;
-    }
-    .ABOUT-US .bungkus a{
-       font-size:  0.8rem!important;  
-      }
 
 
 
@@ -358,7 +289,7 @@ transition: opacity 0.3s ease-in-out;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 600px;
+    min-height: 800px;
     height: auto;
     /* padding-bottom: 100px; */
    
@@ -377,9 +308,10 @@ transition: opacity 0.3s ease-in-out;
     align-items: center;
     flex-direction: column;
     width: 50%;
-    top: 35%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
   
     font-family: 'Times New Roman', Times, serif;
    
@@ -416,9 +348,9 @@ transition: opacity 0.3s ease-in-out;
     align-items: center;
     flex-direction: column ;    
     text-decoration: none;
-    /* border: solid;
+    border: solid;
     border-width: 1px;
-    border-color: #000; */
+    border-color: #000;
     background: #eeeeef;
     color: #000;
     overflow: hidden;
@@ -435,23 +367,8 @@ transition: opacity 0.3s ease-in-out;
     background: none;
     border: none;
  }
-.product a .promo {
-    width: 200px;
-    height: 200px;
 
 
-}
-.product a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column ;    
-    text-decoration: none;
-    border: solid;
-    border-width: 1px;
-    border-color: #000;
-
- }
  .product .harga{
     font-size: 0.7em;
     display: flex;
@@ -461,10 +378,6 @@ transition: opacity 0.3s ease-in-out;
     padding-top: 7px;
  }
 
- .product .harga button {
-    background: none;
-    border: none;
- }
 
 
 
